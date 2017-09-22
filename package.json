@@ -1,0 +1,8 @@
+{
+  "name": "javascript_tdd_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kirkchen/Javascript_TDD_Practice.git",
+  "author": "KirkChen <kirkchen@kkbox.com>",
+  "license": "MIT"
+}
