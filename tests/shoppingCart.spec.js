@@ -21,6 +21,22 @@ describe('ShoppingCart', () => {
           // Assert
           actual.should.equal(expected); 
        }); 
+
+       it('VIP 會員, 300 元商品 2 件, 那折扣後金額 480', () => {
+          // Arrange
+          var level = 'VIP';
+          var price = 300;
+          var qty = 2;
+          var expected = 480;
+          var actual = 0;
+          var shoppingCart = new ShoppingCart();
+          
+          // Act
+          actual = shoppingCart.Calculate(level, price, qty);
+          
+          // Assert
+          actual.should.equal(expected); 
+       }); 
     });
 });
 
