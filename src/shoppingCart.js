@@ -8,14 +8,10 @@ function ShoppingCart() {
 
 ShoppingCart.prototype.Calculate = function (level, price, qty) {
     var totalPrice = price * qty;
-    var rate = this.GetRate(level, totalPrice, qty);
+    var matchedRule = this.rules.filter((rule) => this.IsMatchRule(rule, level, totalPrice, qty));
+    var rate = matchedRule[0].rate;
 
     return totalPrice * rate;
-}
-
-ShoppingCart.prototype.GetRate = function (level, totalPrice, qty) {
-    var matchedRule = this.rules.filter((rule) => this.IsMatchRule(rule, level, totalPrice, qty));
-    return matchedRule[0].rate;
 }
 
 ShoppingCart.prototype.IsMatchRule = function (rule, level, totalPrice, qty) {
