@@ -37,6 +37,22 @@ describe('ShoppingCart', () => {
           // Assert
           actual.should.equal(expected); 
        }); 
+
+       it('Normal 會員, 400 元商品 2 件, 那折扣後金額 800', () => {
+          // Arrange
+          var level = 'Normal';
+          var price = 400;
+          var qty = 2;
+          var expected = 800;
+          var actual = 0;
+          var shoppingCart = new ShoppingCart();
+          
+          // Act
+          actual = shoppingCart.Calculate(level, price, qty);
+          
+          // Assert
+          actual.should.equal(expected); 
+       }); 
     });
 });
 
