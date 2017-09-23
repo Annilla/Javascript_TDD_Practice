@@ -6,7 +6,7 @@ ShoppingCart.prototype.Calculate = function (level, price, qty) {
     if (level === 'VIP' && totalPrice > 500) {
         return totalPrice * 0.8;
     }
-    else if (level === 'Normal' && totalPrice > 1000) {
+    else if (level === 'Normal' && totalPrice > 1000 && qty > 3) {
         return totalPrice * 0.85;
     }
     return totalPrice;
